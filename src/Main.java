@@ -17,7 +17,7 @@ public class Main {
             User[] circles = Circle.getCircles(follow.getIDs(), twitter).toArray(new User[0]);
             for (User user: circles
                  ) {
-                System.out.println(user.getName());
+                System.out.println(user.getName() + "(" + user.getScreenName() + ")");
             }
         } catch (TwitterException e) {
             e.printStackTrace();

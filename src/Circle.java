@@ -64,7 +64,7 @@ public class Circle {
             //lookupUsersの仕様が100人までの情報しか取得できないため100人ずつ処理
             ResponseList<User> users = twitter.lookupUsers(Arrays.copyOfRange(twitterIDs, i * 100, (i + 1) * 100));
             for (User user : users) {
-                if (user.getName().matches(".*@.*日目.*")) {
+                if (user.getName().matches(".*日目.*")) {
                     targetUsers.add(user);
                 }
             }
