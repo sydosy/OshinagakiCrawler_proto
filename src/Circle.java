@@ -10,7 +10,6 @@ import java.util.Arrays;
 public class Circle {
     private String name;
     private String space;
-    private URL webSite;
     private URL menuURL;
     private Author author;
 
@@ -28,14 +27,6 @@ public class Circle {
 
     public void setSpace(String space) {
         this.space = space;
-    }
-
-    public URL getWebSite() {
-        return webSite;
-    }
-
-    public void setWebSite(URL webSite) {
-        this.webSite = webSite;
     }
 
     public URL getMenuURL() {
@@ -81,4 +72,9 @@ public class Circle {
         }
         return targetUsers;
     }
+
+    public URL searchMenuTweet(Author author){
+        return null;
+    }
+
 }

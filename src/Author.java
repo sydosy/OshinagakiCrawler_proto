@@ -1,9 +1,11 @@
-import twitter4j.User;
+import java.net.URL;
 
 public class Author {
+    private Long id;
     private String name;
-    private User twitterAccount;
-    private Long twitterID;
+    private String screen_name;
+    private URL profile_image_url_https;
+
 
     public String getName() {
         return name;
@@ -13,19 +15,11 @@ public class Author {
         this.name = name;
     }
 
-    public User getTwitterAccount() {
-        return twitterAccount;
+    public Long getId() {
+        return id;
     }
 
-    public void setTwitterAccount(User twitterAccount) {
-        this.twitterAccount = twitterAccount;
-    }
-
-    public Long getTwitterID() {
-        return twitterID;
-    }
-
-    public void setTwitterID(Long twitterID) {
-        this.twitterID = twitterID;
+    public void setId(Long id) {
+        this.id = id;
     }
 }
