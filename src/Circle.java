@@ -3,15 +3,25 @@ import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.User;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Circle {
     private String name;
     private String space;
-    private URL menuURL;
     private Author author;
+    private Set<String> menuURLs;
+
+    public Circle(Author author) {
+        this.author = author;
+    }
+
+    public Circle(Author author, Set<String> menuURLs) {
+        this.author = author;
+        this.menuURLs = menuURLs;
+    }
 
     public String getName() {
         return name;
@@ -29,12 +39,12 @@ public class Circle {
         this.space = space;
     }
 
-    public URL getMenuURL() {
-        return menuURL;
+    public Set<String> getMenuURLs() {
+        return menuURLs;
     }
 
-    public void setMenuURL(URL menuURL) {
-        this.menuURL = menuURL;
+    public void setMenuURLs(HashSet<String> menuURLs) {
+        this.menuURLs = menuURLs;
     }
 
     public Author getAuthor() {
@@ -83,10 +93,6 @@ public class Circle {
             }
         }
         return targetUsers;
-    }
-
-    public URL searchMenuTweet(Author author) {
-        return null;
     }
 
 }
