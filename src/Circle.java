@@ -55,7 +55,13 @@ public class Circle {
             //lookupUsersの仕様が100人までの情報しか取得できないため100人ずつ処理
             ResponseList<User> users = twitter.lookupUsers(Arrays.copyOfRange(twitterIDs, i * 100, (i + 1) * 100));
             for (User user : users) {
-                if (user.getName().matches(".*日目.*")) {
+                if (user.getName().matches(".*\\w.*\\d\\d[ab].*")) {
+                    targetUsers.add(user);
+                } else if (user.getName().matches(".*日目.*")) {
+                    targetUsers.add(user);
+                } else if (user.getName().matches(".*[木金土]曜.*")) {
+                    targetUsers.add(user);
+                } else if (user.getName().matches(".*C91.*")) {
                     targetUsers.add(user);
                 }
             }
@@ -65,7 +71,13 @@ public class Circle {
         if (surplusUsers != 0) {
             ResponseList<User> users = twitter.lookupUsers(Arrays.copyOfRange(twitterIDs, loopMax * 100, loopMax * 100 + surplusUsers));
             for (User user : users) {
-                if (user.getName().matches(".*日目.*")) {
+                if (user.getName().matches(".*\\w.*\\d\\d[ab].*")) {
+                    targetUsers.add(user);
+                } else if (user.getName().matches(".*日目.*")) {
+                    targetUsers.add(user);
+                } else if (user.getName().matches(".*[木金土]曜.*")) {
+                    targetUsers.add(user);
+                } else if (user.getName().matches(".*C91.*")) {
                     targetUsers.add(user);
                 }
             }
@@ -73,7 +85,7 @@ public class Circle {
         return targetUsers;
     }
 
-    public URL searchMenuTweet(Author author){
+    public URL searchMenuTweet(Author author) {
         return null;
     }
 

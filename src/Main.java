@@ -15,13 +15,14 @@ public class Main {
         //フォローしているUserからサークルを抽出
         try {
             IDs follow = twitter.getFriendsIDs(screenName, -1);
-            System.out.println(follow.getIDs().length);
+            System.out.println("フォローしている人数: " + follow.getIDs().length);
 
             User[] circles = Circle.getCircles(follow.getIDs(), twitter).toArray(new User[0]);
             for (User user : circles
                     ) {
                 System.out.println(user.getName() + "(" + user.getScreenName() + ")");
             }
+            System.out.println("抽出したサークル数: " + circles.length);
 
             //抽出したUserをまとめてリストに入れる
             System.out.println("Create List name here");

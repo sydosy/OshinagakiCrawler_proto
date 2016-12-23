@@ -1,8 +1,8 @@
 # 時間がない人のためのサークルチェッカー
 ## 概要
-Twitterのフォロー欄からコミケ参加者を割り出す。
+Twitterのフォロー欄からコミケ(コミックマーケット)参加者を割り出す。
 
-割り出したコミケ参加者からお品書きを抽出する。
+割り出したコミケ参加者からお品書き(商品情報)を抽出する。
 
 お品書きはtwitterに画像を上げたり、WebブログURLや、
 pixivのURLを上げたりと様々である。
@@ -22,13 +22,28 @@ pixivのURLを上げたりと様々である。
 - ObjectをJSON、JSONをObjectに変換する必要がある
 
 ### ローカルに保存するべき情報
-#### Twitter情報
-- id
-- screen_name
-- name
-
-#### 独自クラス
+#### Circleクラス
 - サークル名
-- TwitterUser
+- サークル配置場所
 - お品書きURL
-- サークルList
+- Authorクラス
+
+#### Authorクラス
+- twitterID
+- twitter_name
+- twitter_screen_name
+- twitter_icon
+
+### twitterアカウント抽出正規表現
+- `.*\w.*\d\d[ab].*`
+- `.*日目.*`
+- `.*C91.*`
+- `.*[木金土]曜.*`
+
+## tweet抽出単語
+- お品書き
+- おしながき
+- 新刊
+- 落としました
+- 落ちました
+- グッズ
