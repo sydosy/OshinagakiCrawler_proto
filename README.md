@@ -52,10 +52,10 @@ pixivのURLを上げたりと様々である。
 
 
 ## 参考文献
-[Twitter4J](http://twitter4j.org/ja/index.html)
-[twitterの検索術 (search/tweets と search/universal)](https://gist.github.com/cucmberium/e687e88565b6a9ca7039)
-[Twitter4Jで自分のフォロワーのリストを作成する](http://eiryu.hatenablog.com/entry/20101030/1288456899)
-[GSONの基本的な使い方](http://qiita.com/u-chida/items/cbdd040e4199a10936dc)
-[TwitterAPIで期間指定してTweetを取得する方法](http://qiita.com/areph/items/0745cb744a12810334c6#%E3%81%9D%E3%81%AE%E4%BB%96)
-[Twitter APIの使い方まとめ](https://syncer.jp/twitter-api-matome)
-[GET statuses/home_timeline - ホームタイムラインを取得](https://syncer.jp/twitter-api-matome/get/statuses/home_timeline)
+- [Twitter4J](http://twitter4j.org/ja/index.html)
+- [twitterの検索術 (search/tweets と search/universal)](https://gist.github.com/cucmberium/e687e88565b6a9ca7039)
+- [Twitter4Jで自分のフォロワーのリストを作成する](http://eiryu.hatenablog.com/entry/20101030/1288456899)
+- [GSONの基本的な使い方](http://qiita.com/u-chida/items/cbdd040e4199a10936dc)
+- [TwitterAPIで期間指定してTweetを取得する方法](http://qiita.com/areph/items/0745cb744a12810334c6#%E3%81%9D%E3%81%AE%E4%BB%96)
+- [Twitter APIの使い方まとめ](https://syncer.jp/twitter-api-matome)
+- [GET statuses/home_timeline - ホームタイムラインを取得](https://syncer.jp/twitter-api-matome/get/statuses/home_timeline)
