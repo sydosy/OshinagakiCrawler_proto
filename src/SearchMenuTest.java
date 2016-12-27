@@ -49,16 +49,18 @@ public class SearchMenuTest {
             PagableResponseList<User> users = twitter.getUserListMembers(userListIDs[selectNum], 5000, cursor);
             Iterator<User> iterator = users.iterator();
             URLEntity[] urlEntities;
-            Set<String> urls = new HashSet<>();
             while (iterator.hasNext()) {
+                Set<String> urls = new HashSet<>();
                 User user = iterator.next();
                 System.out.println(user.getName());
+                //ユーザーからお品書きTweetを検索
                 for (Status menuTweet : searchMenuTweet(twitter, query, user).getTweets()) {
                     //tweetからURLを抽出
                     urlEntities = menuTweet.getURLEntities();
                     //URLがあれば
                     if (urlEntities != null && urlEntities.length > 0) {
                         for (URLEntity urlEntity : urlEntities) {
+                            //短縮URLをセットに登録
                             urls.add(urlEntity.getExpandedURL());
                         }
                     }
@@ -75,6 +77,7 @@ public class SearchMenuTest {
         } catch (TwitterException e) {
             e.printStackTrace();
         }
+        //json形式で出力
         lastPw.println(gson.toJson(circleList));
 
         //close処理

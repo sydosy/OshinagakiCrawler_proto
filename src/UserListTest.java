@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 import static java.lang.Thread.sleep;
 
-public class Main {
+public class UserListTest {
     public static void main(String[] args) throws IOException {
         Twitter twitter = new TwitterFactory().getInstance();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

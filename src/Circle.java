@@ -3,10 +3,7 @@ import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.User;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Circle {
     private String name;
@@ -95,4 +92,8 @@ public class Circle {
         return targetUsers;
     }
 
+    @Override
+    public String toString(){
+        return author.getName() + "(@" + author.getScreen_name() + ")\n" + getMenuURLs();
+    }
 }
